@@ -84,11 +84,6 @@ img {
     z-index: 9;
 }
 
-.fa-solid:hover {
-    font-size: x-large;
-    transition: 150ms;
-}
-
 .fa-circle-chevron-up {
     top: 3%;
 }
@@ -100,4 +95,11 @@ img {
 p {
     font-size: 1rem;
     font-weight: 300;
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        max-width: 90%;
+        max-height: 70%;
+    }
 }
