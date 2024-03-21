@@ -4,10 +4,13 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: black;
+}
+
 .container {
-    background-color: blue;
-    width: 50rem;
-    height: 20rem;
+    width: 55rem;
+    height: 25rem;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -21,13 +24,11 @@
 .row {
     display: flex;
     width: 100%;
-    background-color: burlywood;
 }
 
 .main-thumbnail {
     position: relative;
     width: 78%;
-    background-color: black;
     object-fit: fill;
 }
 
@@ -36,16 +37,15 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    padding: 1rem;
+    padding: 1.2rem;
     color: rgb(227, 221, 221);
 }
 
-.small-thumbnail-ctn {
+.small-thumbnails-ctn {
     display: flex;
     flex-direction: column;
     position: relative;
     width: 22%;
-    background-color: red;
     text-align: center;
 }
 
@@ -55,10 +55,23 @@ img {
     object-fit: cover;
 }
 
-.small-thumbnail {
+.small-thumbnails-ctn img {
+    opacity: 0.5;
+}
+
+.active {
+    opacity: 1;
+    border: 2px solid white;
+}
+
+[class|=small-thumbnail] {
     width: 100%;
     height: 20%;
-    border: 1px solid black;
+    background-color: black;
+}
+
+[class|=small-thumbnail] > .active {
+    opacity: 1;
 }
 
 .fa-solid {
@@ -66,7 +79,14 @@ img {
     left: 50%;
     transform: translate(-50%);
     filter: invert(1);
+    cursor: pointer;
     font-size: large;
+    z-index: 9;
+}
+
+.fa-solid:hover {
+    font-size: x-large;
+    transition: 150ms;
 }
 
 .fa-circle-chevron-up {
@@ -75,4 +95,9 @@ img {
 
 .fa-circle-chevron-down {
     bottom: 3%;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 300;
 }
